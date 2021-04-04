@@ -1,0 +1,276 @@
+:root{
+--primary:#ffce00;
+}
+
+*{
+    margin:0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: black      ;
+}
+
+/* nav menu */
+.menu{ 
+    display: flex;
+    justify-content:space-between;
+    background: white;
+    align-items: center;
+    height: 3.5rem;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-right: 1rem;
+}
+
+.menu .renew-btn{
+    font-weight: normal;
+    text-transform: capitalize;
+    border-bottom: 2px solid var(--primary);
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, #fff 50%, var(--primary) 50%);
+    transition: background-postion .1s ease-in-out, color .1s ease-in-out;
+}
+
+.menu .renew-btn:hover, .menu .renew-btn:focus{
+    background-position: 0 100%;
+}
+
+.menu img{
+    width: 8rem;  
+}
+
+.fa-search{
+    margin-right: 1rem;
+}
+
+a.subcribe-btn{
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-image: linear-gradient(to left, black 50%, var(--primary) 50%);
+    transition: background-position .2s ease-in-out, color .2s ease-in-out;
+    color: white;
+    padding: 1rem;
+}
+
+a.subscribe-btn:hover, a.subscribe-btn:focus{
+    background-position: 0% 0;
+    color: black;
+}
+
+.fa-search,.renew-btn,.menu-btn{
+    display:none;
+}
+
+@media(min-width:768px){
+    .fa-search,.renew-btn,.menu-btn{
+    display:inline-block;}
+}
+
+/* header*/
+.site-header h1{
+    font-size: 2.7rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 3rem;
+}
+
+.site-header p{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+
+.site-header span{
+    border-bottom: 2px solid var(--primary);
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, black 50%, var(--primary) 50%);
+    transition: background-position .1s ease-in-out, color .1s ease-in-out;
+}
+
+.site-header span:hover, .site-header span:focus{
+    background-position: 0 100%;
+    color: black;
+    cursor: pointer;
+}
+
+    /*main-news*/
+    .primary-news{
+        /*parent/containeralways needs to be relative*/
+        position: relative;
+        width: 30rem;
+        height: 30rem;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 4rem;
+        overflow: hidden;
+
+    }
+    .primary-news img{
+        width: 100%;
+        height: 30rem;
+        filter: grayscale(90%);
+    }
+    .primary-news-text{
+        /*the child is absolute*/
+        position: absolute;
+        top: 15rem;
+        left: 2rem;
+        width: 80%;
+    }
+    .primary-news-text h4{
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+    .primary-news-text h2{
+        font-size: 32px;
+        color: white;
+        letter-spacing: 3px;
+        word-spacing: 5px;
+        margin-top: 10px;
+    }
+
+    .read-text{
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: 2rem;
+    }
+
+    .read-text i{
+         margin-right: 10px;
+    }
+
+    .primary-news:hover img{
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+
+    .secondary-news{
+        width: 30rem;
+        height: 32rem;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+    .secondary-news img{
+        max-width: 100%;
+    }
+
+    .secondary-text{
+        background-color: black;
+        padding: 10px;
+    }
+
+    .secondary-text h4{
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 3px;
+
+    }
+
+    .secondary-text p.news-title{
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .secondary-news img:hover{
+        border-bottom: 5px solid var(--primary);
+        cursor: pointer;
+    }
+
+    /*todays picks*/
+    .picks-section{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .picks{
+        margin-top: 2.5rem;
+        display: flex;
+    }
+
+    .picks-section h2{
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        color: white;
+        border-left: 3px solid var(--primary);
+        padding-left: 2rem;
+    }
+
+    .pick img{
+        height: 5rem;
+        width: 10rem;
+    }
+    .picks-img img{
+        width: 100%;
+    }
+    .pick-text{
+        margin-left: 2rem;
+    }
+
+    .pick-text h3{
+        font-size: .8rem;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+    }
+    .pick-text p{
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+    }
+
+/*larger view styling*/
+    @media(min-width:768px){
+        .header-container{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3rem;
+           
+        }
+    
+    .main-news{
+        width: 70%;
+    }
+    .picks-section{
+        width: 30%;
+    }
+    .secondary-news-container{
+        display: flex;
+    }
+    .primary-news{
+        width: 50rem;
+        height: 25rem;
+        margin-bottom: 0;
+    }
+    .secondary-news{
+        width: 21rem;
+        margin-top:.5rem;
+        padding: .5rem;
+        height: 25rem;
+
+    }
+}
